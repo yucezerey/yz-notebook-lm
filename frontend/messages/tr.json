@@ -1,0 +1,68 @@
+{
+  "dashboard": {
+    "title": "Kontrol Paneli",
+    "subtitle": "NotebookLM kontrol merkeziniz."
+  },
+  "nav": {
+    "dashboard": "Ana Sayfa",
+    "notebooks": "Defterler",
+    "chat": "Sohbet",
+    "sources": "Kaynaklar",
+    "studio": "Studyo",
+    "research": "Arastirma",
+    "personas": "Personalar",
+    "responses": "Yanitlar",
+    "downloads": "Indirmeler",
+    "workflows": "Is Akislari",
+    "settings": "Ayarlar"
+  },
+  "notebooks": {
+    "title": "Defterler",
+    "subtitle": "NotebookLM kutuphanenizi yonetin",
+    "add": "Defter Ekle",
+    "search": "Defter ara...",
+    "empty": "Henuz defter yok. Baslamak icin bir tane ekleyin.",
+    "name": "Ad",
+    "url": "Defter URL",
+    "description": "Aciklama",
+    "topics": "Konular",
+    "activate": "Aktif Yap",
+    "remove": "Kaldir",
+    "stats": "Kutuphane Istatistikleri"
+  },
+  "chat": {
+    "title": "Sohbet",
+    "subtitle": "Defterlerinize sorular sorun",
+    "placeholder": "Bir soru sorun...",
+    "send": "Gonder",
+    "thinking": "Dusunuyor..."
+  },
+  "studio": {
+    "title": "Studyo",
+    "subtitle": "Defterlerinizden icerik uretin",
+    "audio": "Sesli Ozet",
+    "video": "Video Ozet",
+    "slides": "Sunu",
+    "mindmap": "Zihin Haritasi",
+    "infographic": "Infografik",
+    "datatable": "Veri Tablosu",
+    "reports": "Raporlar",
+    "generate": "Uret",
+    "customPrompt": "Ozel komut (istege bagli)"
+  },
+  "auth": {
+    "signIn": "Giris yap",
+    "signOut": "Cikis yap",
+    "continueWithGoogle": "Google ile devam et",
+    "tagline": "Verileriniz gizli ve yerel kalir."
+  },
+  "common": {
+    "loading": "Yukleniyor...",
+    "error": "Bir seyler yanlis gitti",
+    "retry": "Tekrar dene",
+    "cancel": "Iptal",
+    "save": "Kaydet",
+    "delete": "Sil",
+    "confirm": "Onayla"
+  }
+}

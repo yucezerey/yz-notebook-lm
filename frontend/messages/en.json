@@ -1,0 +1,68 @@
+{
+  "dashboard": {
+    "title": "Dashboard",
+    "subtitle": "Your NotebookLM control center."
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "notebooks": "Notebooks",
+    "chat": "Chat",
+    "sources": "Sources",
+    "studio": "Studio",
+    "research": "Research",
+    "personas": "Personas",
+    "responses": "Responses",
+    "downloads": "Downloads",
+    "workflows": "Workflows",
+    "settings": "Settings"
+  },
+  "notebooks": {
+    "title": "Notebooks",
+    "subtitle": "Manage your NotebookLM library",
+    "add": "Add Notebook",
+    "search": "Search notebooks...",
+    "empty": "No notebooks yet. Add one to get started.",
+    "name": "Name",
+    "url": "Notebook URL",
+    "description": "Description",
+    "topics": "Topics",
+    "activate": "Set Active",
+    "remove": "Remove",
+    "stats": "Library Stats"
+  },
+  "chat": {
+    "title": "Chat",
+    "subtitle": "Ask questions to your notebooks",
+    "placeholder": "Ask a question...",
+    "send": "Send",
+    "thinking": "Thinking..."
+  },
+  "studio": {
+    "title": "Studio",
+    "subtitle": "Generate content from your notebooks",
+    "audio": "Audio Overview",
+    "video": "Video Overview",
+    "slides": "Slide Deck",
+    "mindmap": "Mind Map",
+    "infographic": "Infographic",
+    "datatable": "Data Table",
+    "reports": "Reports",
+    "generate": "Generate",
+    "customPrompt": "Custom prompt (optional)"
+  },
+  "auth": {
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "continueWithGoogle": "Continue with Google",
+    "tagline": "Your data stays private and local."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try again",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "confirm": "Confirm"
+  }
+}
