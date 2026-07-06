@@ -95,6 +95,24 @@ def cmd_search(query: str):
     print(json.dumps(results, ensure_ascii=False))
 
 
+def cmd_add_content(notebook_id: str, file_path: str):
+    src = Path(file_path)
+    if not src.exists():
+        print(f"ERROR: File not found: {file_path}", file=sys.stderr)
+        sys.exit(1)
+    notebooks = _load_notebooks()
+    ids = [nb["id"] for nb in notebooks]
+    if notebook_id not in ids:
+        print(f"ERROR: Notebook {notebook_id} not found", file=sys.stderr)
+        sys.exit(1)
+    content_dir = DATA_DIR / "notebook_content"
+    content_dir.mkdir(parents=True, exist_ok=True)
+    dest = content_dir / f"{notebook_id}.txt"
+    dest.write_text(src.read_text())
+    size_kb = dest.stat().st_size // 1024
+    print(json.dumps({"message": f"Content saved ({size_kb} KB) for notebook {notebook_id}"}))
+
+
 def cmd_stats():
     notebooks = _load()
     active_id = ACTIVE_FILE.read_text().strip() if ACTIVE_FILE.exists() else None
@@ -129,6 +147,10 @@ def main():
 
     sub.add_parser("stats")
 
+    ac_p = sub.add_parser("add-content")
+    ac_p.add_argument("--id", required=True)
+    ac_p.add_argument("--file", required=True, help="Path to a text file with the notebook source content")
+
     args = parser.parse_args()
 
     if args.command == "list":
@@ -143,6 +165,8 @@ def main():
         cmd_search(args.query)
     elif args.command == "stats":
         cmd_stats()
+    elif args.command == "add-content":
+        cmd_add_content(args.id, args.file)
     else:
         parser.print_help()
         sys.exit(1)

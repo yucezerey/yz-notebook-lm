@@ -96,8 +96,17 @@ def cmd_import_cookies(cookies_file: str):
         sys.exit(1)
 
     # Playwright cookie fields: name, value, domain, path, expires, httpOnly, secure, sameSite
+    SAME_SITE_MAP = {
+        "no_restriction": "None",
+        "lax": "Lax",
+        "strict": "Strict",
+        "none": "None",
+    }
+
     playwright_cookies = []
     for c in cookies:
+        raw_ss = c.get("sameSite") or "Lax"
+        same_site = SAME_SITE_MAP.get(raw_ss.lower(), "Lax") if isinstance(raw_ss, str) else "Lax"
         pc = {
             "name": c.get("name", ""),
             "value": c.get("value", ""),
@@ -106,7 +115,7 @@ def cmd_import_cookies(cookies_file: str):
             "expires": c.get("expirationDate", c.get("expires", -1)),
             "httpOnly": c.get("httpOnly", False),
             "secure": c.get("secure", True),
-            "sameSite": c.get("sameSite", "Lax"),
+            "sameSite": same_site,
         }
         playwright_cookies.append(pc)
 
