@@ -9,7 +9,7 @@ PROJECT_DIR = BASE_DIR.parent
 
 SKILL_DIR = Path(os.getenv(
     "SKILL_DIR",
-    Path.home() / ".claude" / "skills" / "notebooklm"
+    PROJECT_DIR / "skills"
 ))
 
 SKILL_SCRIPTS_DIR = SKILL_DIR / "scripts"
